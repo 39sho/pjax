@@ -4,7 +4,7 @@ const $content = document.querySelector("#content");
 $a.addEventListener("click", async (e) => {
   e.preventDefault();
   
-  console.log(e.target.href;
+  console.log(e.target.href);
   
   const response = await fetch(e.target.href);
   const text = response.text();
