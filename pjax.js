@@ -1,5 +1,9 @@
-const $a = document.querySelector("a");
-const $content = document.querySelector("#content");
+const $a, $content;
+
+const init = () => {
+  $a = document.querySelector("a");
+  $content = document.querySelector("#content");
+};
 
 $a.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -12,4 +16,8 @@ $a.addEventListener("click", async (e) => {
   const html = new DOMParser().parseFromString(text, "text/html");
   
   $content.replaceWith(html.querySelector("#content"));
+  
+  init();
 });
+
+init();
