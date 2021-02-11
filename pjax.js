@@ -7,7 +7,7 @@ $a.addEventListener("click", async (e) => {
   console.log(e.target.href);
   
   const response = await fetch(e.target.href);
-  const text = response.text();
+  const text = await response.text();
   
   const html = new DOMParser().parseFromString(text, "text/html");
   
